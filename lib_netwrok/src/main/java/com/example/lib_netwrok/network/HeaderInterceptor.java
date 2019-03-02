@@ -15,8 +15,8 @@ public class HeaderInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Request originalRequest = chain.request();//原始请求对象
         Request nrequest = originalRequest.newBuilder()
-                .addHeader("userId","1551332768505132")
-                .addHeader("sessionId","132")
+                .addHeader("userId","132")
+                .addHeader("sessionId","1551332768505132")
                 .build();
 
         Response response = chain.proceed(nrequest);
